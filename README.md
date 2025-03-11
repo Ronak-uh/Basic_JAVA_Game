@@ -136,7 +136,7 @@ This project is licensed under the **MIT License**.
 If you have any questions, feel free to contact me:
 - **GitHub:** [https://github.com/Ronak-uh](https://github.com/Ronak-uh)
 - **Email:** ronakchavhan89@gmail.com
-- **LinkedIn:** [Ronak Chavhan](https://www.linkedin.com/in/ronak-chavhan)
+- **LinkedIn:** [Ronak Chavhan](https://www.linkedin.com/in/ronak-chavhan-b3343a32b/)
 
 ---
 
