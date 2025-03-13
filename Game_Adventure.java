@@ -75,7 +75,7 @@ public class Game_Adventure
         mainTextPanel.setBounds(100,100,600,250);
         con.add(mainTextPanel);
          
-        mainTextArea = new JTextArea("HELLO! Nice to meet you.");
+        mainTextArea = new JTextArea();
         mainTextArea.setBounds(100,100,600,250);
         mainTextArea.setBackground(Color.blue);
         mainTextArea.setForeground(Color.white);
@@ -240,11 +240,23 @@ public class Game_Adventure
     public void west()
     {
         position = "west";
-        mainTextArea.setText("You encounter a Goblin!");
-        choice1.setText("Fight");
-        choice2.setText("Run");
-        choice3.setText("");
-        choice4.setText("");
+
+        if (goblinHP <= 0)
+        {
+            mainTextArea.setText("You came across the dead body of the goblin which \nyou killed earlier.");
+            choice1.setText("Go East");
+            choice2.setText("");
+            choice3.setText("");
+            choice4.setText("");
+        }
+        else 
+        {
+            mainTextArea.setText("You encounter a Goblin!");
+            choice1.setText("Fight");
+            choice2.setText("Run");
+            choice3.setText("");
+            choice4.setText("");
+        }
     }
 
     public void fight()
@@ -442,13 +454,20 @@ public class Game_Adventure
                 case "west":
                 switch(yourChoice)
                 {
-                    case  "c1":
-                    fight();
-                    break;
-
+                    case "c1":
+                        if (goblinHP > 0) 
+                        {
+                            fight();
+                        }
+                        else  
+                        {
+                            crossRoad();
+                        }
+                        break;
+            
                     case "c2":
-                    crossRoad();
-                    break;
+                        crossRoad();
+                        break;
                 }
                 break;
 
